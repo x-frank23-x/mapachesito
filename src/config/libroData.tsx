@@ -2,22 +2,23 @@ import React from "react";
 import { motion } from "framer-motion";
 import { ListaCitas } from "../Components/CitasComponents";
 
-// ==========================================
-// FUNCIÓN HELPER PARA RESOLVER IMÁGENES CON VITE
-// ==========================================
-import imgPortada from "public/portada.jpeg";
-import img1 from "public/1.jpeg";
-import img2 from "public/2.jpeg";
-import img3 from "public/3.jpeg";
-import img4 from "public/4.jpeg";
-import img5 from "public/5.jpeg";
-import img6 from "public/6.jpeg";
-import img7 from "public/7.jpeg";
-import img8 from "public/8.jpeg";
-import img9 from "public/9.jpeg";
-import img10 from "public/10.jpeg";
-import img11 from "public/11.jpeg";
-import img12 from "public/12.jpeg";
+// Helper para construir la ruta correcta considerando el subpath de GitHub Pages
+const getAsset = (path: string) => `${import.meta.env.BASE_URL}${path}`;
+
+// Carga de imágenes desde /public
+const imgPortada = getAsset("portada.jpeg");
+const img1 = getAsset("1.jpeg");
+const img2 = getAsset("2.jpeg");
+const img3 = getAsset("3.jpeg");
+const img4 = getAsset("4.jpeg");
+const img5 = getAsset("5.jpeg");
+const img6 = getAsset("6.jpeg");
+const img7 = getAsset("7.jpeg");
+const img8 = getAsset("8.jpeg");
+const img9 = getAsset("9.jpeg");
+const img10 = getAsset("10.jpeg");
+const img11 = getAsset("11.jpeg");
+const img12 = getAsset("12.jpeg");
 
 export interface HojaData {
   id: string | number;
