@@ -6,7 +6,7 @@ import { ListaCitas } from "../Components/CitasComponents";
 // FUNCIÓN HELPER PARA RESOLVER IMÁGENES CON VITE
 // ==========================================
 const getAssetUrl = (fileName: string) => {
-  return new URL(`../assets/${fileName}`, import.meta.url).href;
+  return new URL(`../public/${fileName}`, import.meta.url).href;
 };
 
 // Carga dinámica de imágenes
