@@ -5,24 +5,19 @@ import { ListaCitas } from "../Components/CitasComponents";
 // ==========================================
 // FUNCIÓN HELPER PARA RESOLVER IMÁGENES CON VITE
 // ==========================================
-const getAssetUrl = (fileName: string) => {
-  return new URL(`../public/${fileName}`, import.meta.url).href;
-};
-
-// Carga dinámica de imágenes
-const imgPortada = getAssetUrl("portada.jpeg");
-const img1 = getAssetUrl("1.jpeg");
-const img2 = getAssetUrl("2.jpeg");
-const img3 = getAssetUrl("3.jpeg");
-const img4 = getAssetUrl("4.jpeg");
-const img5 = getAssetUrl("5.jpeg");
-const img6 = getAssetUrl("6.jpeg");
-const img7 = getAssetUrl("7.jpeg");
-const img8 = getAssetUrl("8.jpeg");
-const img9 = getAssetUrl("9.jpeg");
-const img10 = getAssetUrl("10.jpeg");
-const img11 = getAssetUrl("11.jpeg");
-const img12 = getAssetUrl("12.jpeg");
+import imgPortada from "public/portada.jpeg";
+import img1 from "public/1.jpeg";
+import img2 from "public/2.jpeg";
+import img3 from "public/3.jpeg";
+import img4 from "public/4.jpeg";
+import img5 from "public/5.jpeg";
+import img6 from "public/6.jpeg";
+import img7 from "public/7.jpeg";
+import img8 from "public/8.jpeg";
+import img9 from "public/9.jpeg";
+import img10 from "public/10.jpeg";
+import img11 from "public/11.jpeg";
+import img12 from "public/12.jpeg";
 
 export interface HojaData {
   id: string | number;
