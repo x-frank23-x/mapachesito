@@ -11,5 +11,5 @@ export default defineConfig({
     babel({ presets: [reactCompilerPreset()] })
     
   ],
-  base: '/nombre-de-tu-repositorio/',
+  base: '/mapachesito/',
 })
