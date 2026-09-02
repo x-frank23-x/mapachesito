@@ -2,6 +2,23 @@ import React from "react";
 import { motion } from "framer-motion";
 import { ListaCitas } from "../Components/CitasComponents";
 
+// ==========================================
+// 1. IMPORTACIÓN DIRECTA DE TODAS LAS IMÁGENES
+// ==========================================
+import imgPortada from "../assets/portada.jpeg";
+import img1 from "../assets/1.jpeg";
+import img2 from "../assets/2.jpeg";
+import img3 from "../assets/3.jpeg";
+import img4 from "../assets/4.jpeg";
+import img5 from "../assets/5.jpeg";
+import img6 from "../assets/6.jpeg";
+import img7 from "../assets/7.jpeg";
+import img8 from "../assets/8.jpeg";
+import img9 from "../assets/9.jpeg";
+import img10 from "../assets/10.jpeg";
+import img11 from "../assets/11.jpeg";
+import img12 from "../assets/12.jpeg";
+
 export interface HojaData {
   id: string | number;
   esTapa: boolean;
@@ -21,7 +38,7 @@ const TEXTO_CARTA_PARTE_2 = `Si tuviera que decir que hay una cosa que me encant
 
 Qué hermoso es tenerte porque amo, adoro cómo eres, aunque piense que estás loca, pero loco me tienes por ti. Gracias, mi amor, por estar en esta relación y esforzarnos por ella. No se que mas palabras decir solo que aqui tendremos un libro para los dos que era lo que tenia pensado desde el principio mi niña. aqui escribir nuestro camino juntos.`;
 
-// Collages configurados con tus fotos locales (2.jpeg hasta 12.jpeg)
+// COLLAGES DE FOTOS USANDO IMÁGENES IMPORTADAS
 const hojasCollage: HojaData[] = [
   {
     id: 3,
@@ -35,27 +52,39 @@ const hojasCollage: HojaData[] = [
 
         <motion.div 
           drag
-          dragConstraints={{ top: 0, left: 0, right: 170, bottom: 260 }}
+          dragConstraints={{ top: 0, left: 0, right: 140, bottom: 200 }}
           dragElastic={0.05}
           whileTap={{ scale: 1.05, zIndex: 30 }}
-          className="absolute top-10 left-4 w-28 bg-white p-1.5 shadow-md border border-[#E9D5FF] rounded-sm cursor-grab active:cursor-grabbing z-10"
+          className="absolute top-10 left-4 w-32 bg-white p-1.5 shadow-md border border-[#E9D5FF] rounded-sm cursor-grab active:cursor-grabbing z-10"
         >
-          <img src="/2.jpeg" alt="Recuerdo 2" className="w-full h-20 object-cover rounded-sm pointer-events-none" />
+          <div className="w-full h-24 bg-gray-200 rounded-sm overflow-hidden">
+            <img 
+              src={img2} 
+              alt="Recuerdo 2" 
+              className="w-full h-full object-cover block"
+            />
+          </div>
           <p className="text-[8px] text-center mt-1 font-serif text-[#881337]">Momento especial</p>
         </motion.div>
 
         <motion.div 
           drag
-          dragConstraints={{ top: -140, left: -120, right: 50, bottom: 100 }}
+          dragConstraints={{ top: -140, left: -100, right: 40, bottom: 80 }}
           dragElastic={0.05}
           whileTap={{ scale: 1.05, zIndex: 30 }}
-          className="absolute bottom-16 right-4 w-32 bg-white p-1.5 shadow-md border border-[#FBCFE8] rounded-sm cursor-grab active:cursor-grabbing z-20"
+          className="absolute bottom-16 right-4 w-36 bg-white p-1.5 shadow-md border border-[#FBCFE8] rounded-sm cursor-grab active:cursor-grabbing z-20"
         >
-          <img src="/3.jpeg" alt="Recuerdo 3" className="w-full h-22 object-cover rounded-sm pointer-events-none" />
+          <div className="w-full h-28 bg-gray-200 rounded-sm overflow-hidden">
+            <img 
+              src={img3} 
+              alt="Recuerdo 3" 
+              className="w-full h-full object-cover block"
+            />
+          </div>
           <p className="text-[8px] text-center mt-1 font-serif text-[#6B21A8]">Inolvidable</p>
         </motion.div>
 
-        <div className="bg-[#FAE8FF] p-2 rounded-md border border-[#E9D5FF] z-0">
+        <div className="bg-[#FAE8FF] p-2 rounded-md border border-[#E9D5FF] z-0 mt-auto">
           <p className="text-[10px] text-[#581C87] italic text-center">"Cada segundo a tu lado cuenta..."</p>
         </div>
       </div>
@@ -64,25 +93,37 @@ const hojasCollage: HojaData[] = [
       <div className="w-full h-full p-4 bg-[#F4EAE1] relative flex flex-col justify-between overflow-hidden select-none">
         <motion.div 
           drag
-          dragConstraints={{ top: 0, left: -140, right: 40, bottom: 260 }}
+          dragConstraints={{ top: 0, left: -120, right: 40, bottom: 200 }}
           dragElastic={0.05}
           whileTap={{ scale: 1.05, zIndex: 30 }}
-          className="absolute top-10 right-4 w-28 bg-white p-1.5 shadow-md border border-[#93C5FD] rounded-sm cursor-grab active:cursor-grabbing z-10"
+          className="absolute top-10 right-4 w-32 bg-white p-1.5 shadow-md border border-[#93C5FD] rounded-sm cursor-grab active:cursor-grabbing z-10"
         >
-          <img src="/4.jpeg" alt="Recuerdo 4" className="w-full h-20 object-cover rounded-sm pointer-events-none" />
+          <div className="w-full h-24 bg-gray-200 rounded-sm overflow-hidden">
+            <img 
+              src={img4} 
+              alt="Recuerdo 4" 
+              className="w-full h-full object-cover block"
+            />
+          </div>
         </motion.div>
 
         <motion.div 
           drag
-          dragConstraints={{ top: -140, left: 0, right: 140, bottom: 100 }}
+          dragConstraints={{ top: -140, left: 0, right: 120, bottom: 80 }}
           dragElastic={0.05}
           whileTap={{ scale: 1.05, zIndex: 30 }}
-          className="absolute bottom-16 left-4 w-32 bg-white p-1.5 shadow-md border border-[#FBCFE8] rounded-sm cursor-grab active:cursor-grabbing z-20"
+          className="absolute bottom-16 left-4 w-36 bg-white p-1.5 shadow-md border border-[#FBCFE8] rounded-sm cursor-grab active:cursor-grabbing z-20"
         >
-          <img src="/5.jpeg" alt="Recuerdo 5" className="w-full h-22 object-cover rounded-sm pointer-events-none" />
+          <div className="w-full h-28 bg-gray-200 rounded-sm overflow-hidden">
+            <img 
+              src={img5} 
+              alt="Recuerdo 5" 
+              className="w-full h-full object-cover block"
+            />
+          </div>
         </motion.div>
 
-        <div className="bg-[#EFF6FF] p-2 rounded-md border border-[#BFDBFE] z-0">
+        <div className="bg-[#EFF6FF] p-2 rounded-md border border-[#BFDBFE] z-0 mt-auto">
           <p className="text-[10px] text-[#1E40AF] italic text-center">"Juntos hacia cualquier lugar."</p>
         </div>
       </div>
@@ -100,25 +141,37 @@ const hojasCollage: HojaData[] = [
 
         <motion.div 
           drag
-          dragConstraints={{ top: 0, left: 0, right: 170, bottom: 260 }}
+          dragConstraints={{ top: 0, left: 0, right: 140, bottom: 200 }}
           dragElastic={0.05}
           whileTap={{ scale: 1.05, zIndex: 30 }}
-          className="absolute top-10 left-4 w-28 bg-white p-1.5 shadow-md border border-[#E9D5FF] rounded-sm cursor-grab active:cursor-grabbing z-10"
+          className="absolute top-10 left-4 w-32 bg-white p-1.5 shadow-md border border-[#E9D5FF] rounded-sm cursor-grab active:cursor-grabbing z-10"
         >
-          <img src="/6.jpeg" alt="Recuerdo 6" className="w-full h-20 object-cover rounded-sm pointer-events-none" />
+          <div className="w-full h-24 bg-gray-200 rounded-sm overflow-hidden">
+            <img 
+              src={img6} 
+              alt="Recuerdo 6" 
+              className="w-full h-full object-cover block"
+            />
+          </div>
         </motion.div>
 
         <motion.div 
           drag
-          dragConstraints={{ top: -140, left: -120, right: 50, bottom: 100 }}
+          dragConstraints={{ top: -140, left: -100, right: 40, bottom: 80 }}
           dragElastic={0.05}
           whileTap={{ scale: 1.05, zIndex: 30 }}
-          className="absolute bottom-16 right-4 w-32 bg-white p-1.5 shadow-md border border-[#FBCFE8] rounded-sm cursor-grab active:cursor-grabbing z-20"
+          className="absolute bottom-16 right-4 w-36 bg-white p-1.5 shadow-md border border-[#FBCFE8] rounded-sm cursor-grab active:cursor-grabbing z-20"
         >
-          <img src="/7.jpeg" alt="Recuerdo 7" className="w-full h-22 object-cover rounded-sm pointer-events-none" />
+          <div className="w-full h-28 bg-gray-200 rounded-sm overflow-hidden">
+            <img 
+              src={img7} 
+              alt="Recuerdo 7" 
+              className="w-full h-full object-cover block"
+            />
+          </div>
         </motion.div>
 
-        <div className="bg-[#FAE8FF] p-2 rounded-md border border-[#E9D5FF] z-0">
+        <div className="bg-[#FAE8FF] p-2 rounded-md border border-[#E9D5FF] z-0 mt-auto">
           <p className="text-[10px] text-[#581C87] italic text-center">"Sonrisas que enamoran."</p>
         </div>
       </div>
@@ -127,25 +180,37 @@ const hojasCollage: HojaData[] = [
       <div className="w-full h-full p-4 bg-[#F4EAE1] relative flex flex-col justify-between overflow-hidden select-none">
         <motion.div 
           drag
-          dragConstraints={{ top: 0, left: -140, right: 40, bottom: 260 }}
+          dragConstraints={{ top: 0, left: -120, right: 40, bottom: 200 }}
           dragElastic={0.05}
           whileTap={{ scale: 1.05, zIndex: 30 }}
-          className="absolute top-10 right-4 w-28 bg-white p-1.5 shadow-md border border-[#93C5FD] rounded-sm cursor-grab active:cursor-grabbing z-10"
+          className="absolute top-10 right-4 w-32 bg-white p-1.5 shadow-md border border-[#93C5FD] rounded-sm cursor-grab active:cursor-grabbing z-10"
         >
-          <img src="/8.jpeg" alt="Recuerdo 8" className="w-full h-20 object-cover rounded-sm pointer-events-none" />
+          <div className="w-full h-24 bg-gray-200 rounded-sm overflow-hidden">
+            <img 
+              src={img8} 
+              alt="Recuerdo 8" 
+              className="w-full h-full object-cover block"
+            />
+          </div>
         </motion.div>
 
         <motion.div 
           drag
-          dragConstraints={{ top: -140, left: 0, right: 140, bottom: 100 }}
+          dragConstraints={{ top: -140, left: 0, right: 120, bottom: 80 }}
           dragElastic={0.05}
           whileTap={{ scale: 1.05, zIndex: 30 }}
-          className="absolute bottom-16 left-4 w-32 bg-white p-1.5 shadow-md border border-[#FBCFE8] rounded-sm cursor-grab active:cursor-grabbing z-20"
+          className="absolute bottom-16 left-4 w-36 bg-white p-1.5 shadow-md border border-[#FBCFE8] rounded-sm cursor-grab active:cursor-grabbing z-20"
         >
-          <img src="/9.jpeg" alt="Recuerdo 9" className="w-full h-22 object-cover rounded-sm pointer-events-none" />
+          <div className="w-full h-28 bg-gray-200 rounded-sm overflow-hidden">
+            <img 
+              src={img9} 
+              alt="Recuerdo 9" 
+              className="w-full h-full object-cover block"
+            />
+          </div>
         </motion.div>
 
-        <div className="bg-[#EFF6FF] p-2 rounded-md border border-[#BFDBFE] z-0">
+        <div className="bg-[#EFF6FF] p-2 rounded-md border border-[#BFDBFE] z-0 mt-auto">
           <p className="text-[10px] text-[#1E40AF] italic text-center">"Amor infinito."</p>
         </div>
       </div>
@@ -163,25 +228,37 @@ const hojasCollage: HojaData[] = [
 
         <motion.div 
           drag
-          dragConstraints={{ top: 0, left: 0, right: 170, bottom: 260 }}
+          dragConstraints={{ top: 0, left: 0, right: 140, bottom: 200 }}
           dragElastic={0.05}
           whileTap={{ scale: 1.05, zIndex: 30 }}
-          className="absolute top-10 left-4 w-28 bg-white p-1.5 shadow-md border border-[#E9D5FF] rounded-sm cursor-grab active:cursor-grabbing z-10"
+          className="absolute top-10 left-4 w-32 bg-white p-1.5 shadow-md border border-[#E9D5FF] rounded-sm cursor-grab active:cursor-grabbing z-10"
         >
-          <img src="/10.jpeg" alt="Recuerdo 10" className="w-full h-20 object-cover rounded-sm pointer-events-none" />
+          <div className="w-full h-24 bg-gray-200 rounded-sm overflow-hidden">
+            <img 
+              src={img10} 
+              alt="Recuerdo 10" 
+              className="w-full h-full object-cover block"
+            />
+          </div>
         </motion.div>
 
         <motion.div 
           drag
-          dragConstraints={{ top: -140, left: -120, right: 50, bottom: 100 }}
+          dragConstraints={{ top: -140, left: -100, right: 40, bottom: 80 }}
           dragElastic={0.05}
           whileTap={{ scale: 1.05, zIndex: 30 }}
-          className="absolute bottom-16 right-4 w-32 bg-white p-1.5 shadow-md border border-[#FBCFE8] rounded-sm cursor-grab active:cursor-grabbing z-20"
+          className="absolute bottom-16 right-4 w-36 bg-white p-1.5 shadow-md border border-[#FBCFE8] rounded-sm cursor-grab active:cursor-grabbing z-20"
         >
-          <img src="/11.jpeg" alt="Recuerdo 11" className="w-full h-22 object-cover rounded-sm pointer-events-none" />
+          <div className="w-full h-28 bg-gray-200 rounded-sm overflow-hidden">
+            <img 
+              src={img11} 
+              alt="Recuerdo 11" 
+              className="w-full h-full object-cover block"
+            />
+          </div>
         </motion.div>
 
-        <div className="bg-[#FAE8FF] p-2 rounded-md border border-[#E9D5FF] z-0">
+        <div className="bg-[#FAE8FF] p-2 rounded-md border border-[#E9D5FF] z-0 mt-auto">
           <p className="text-[10px] text-[#581C87] italic text-center">"Construyendo nuestro camino."</p>
         </div>
       </div>
@@ -190,12 +267,18 @@ const hojasCollage: HojaData[] = [
       <div className="w-full h-full p-4 bg-[#F4EAE1] relative flex flex-col justify-between overflow-hidden select-none">
         <motion.div 
           drag
-          dragConstraints={{ top: 0, left: -140, right: 40, bottom: 260 }}
+          dragConstraints={{ top: 0, left: -120, right: 40, bottom: 200 }}
           dragElastic={0.05}
           whileTap={{ scale: 1.05, zIndex: 30 }}
-          className="absolute top-10 right-4 w-28 bg-white p-1.5 shadow-md border border-[#93C5FD] rounded-sm cursor-grab active:cursor-grabbing z-10"
+          className="absolute top-10 right-4 w-32 bg-white p-1.5 shadow-md border border-[#93C5FD] rounded-sm cursor-grab active:cursor-grabbing z-10"
         >
-          <img src="/12.jpeg" alt="Recuerdo 12" className="w-full h-20 object-cover rounded-sm pointer-events-none" />
+          <div className="w-full h-24 bg-gray-200 rounded-sm overflow-hidden">
+            <img 
+              src={img12} 
+              alt="Recuerdo 12" 
+              className="w-full h-full object-cover block"
+            />
+          </div>
         </motion.div>
 
         <div className="bg-[#EFF6FF] p-2 rounded-md border border-[#BFDBFE] z-0 mt-auto">
@@ -220,9 +303,9 @@ export const DATOS_LIBRO: HojaData[] = [
 
         <div className="my-auto w-36 h-36 rounded-full border-4 border-white/40 overflow-hidden shadow-2xl bg-black/20 flex items-center justify-center">
           <img 
-            src="/portada.jpeg" 
+            src={imgPortada} 
             alt="Portada" 
-            className="w-full h-full object-cover" 
+            className="w-full h-full object-cover block" 
           />
         </div>
 
@@ -245,18 +328,18 @@ export const DATOS_LIBRO: HojaData[] = [
     esTapa: false,
     lado_activo: true,
     frente: (
-      <div className="w-full h-full relative overflow-hidden">
+      <div className="w-full h-full relative overflow-hidden bg-gray-100 flex items-center justify-center">
         <img 
-          src="/1.jpeg" 
+          src={img1} 
           alt="Foto Hoja 1" 
-          className="w-full h-full object-cover pointer-events-none" 
+          className="w-full h-full object-cover block" 
         />
       </div>
     ),
     reverso: <div className="w-full h-full bg-[#F4EAE1]" />
   },
 
-  // HOJA 2: CARTA COMPLETA (PARTE 1 Y PARTE 2)
+  // HOJA 2: CARTA COMPLETA
   {
     id: 2,
     esTapa: false,
@@ -285,7 +368,7 @@ export const DATOS_LIBRO: HojaData[] = [
 
   ...hojasCollage,
 
-  // HOJA CITAS COMPLETAS (50 CITAS)
+  // HOJA CITAS
   {
     id: 6,
     esTapa: false,
@@ -298,8 +381,6 @@ export const DATOS_LIBRO: HojaData[] = [
       </div>
     )
   },
-
- 
 
   // HOJA FINAL: TAPA TRASERA
   {
