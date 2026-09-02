@@ -3,21 +3,27 @@ import { motion } from "framer-motion";
 import { ListaCitas } from "../Components/CitasComponents";
 
 // ==========================================
-// IMPORTACIÓN DIRECTA DE IMÁGENES DESDE src/assets/
+// FUNCIÓN HELPER PARA RESOLVER IMÁGENES CON VITE
 // ==========================================
-import imgPortada from "../../assets/portada.jpeg";
-import img1 from "../../assets/1.jpeg";
-import img2 from "../../assets/2.jpeg";
-import img3 from "../../assets/3.jpeg";
-import img4 from "../../assets/4.jpeg";
-import img5 from "../../assets/5.jpeg";
-import img6 from "../../assets/6.jpeg";
-import img7 from "../../assets/7.jpeg";
-import img8 from "../../assets/8.jpeg";
-import img9 from "../../assets/9.jpeg";
-import img10 from "../../assets/10.jpeg";
-import img11 from "../../assets/11.jpeg";
-import img12 from "../../assets/12.jpeg";
+const getAssetUrl = (fileName: string) => {
+  return new URL(`../assets/${fileName}`, import.meta.url).href;
+};
+
+// Carga dinámica de imágenes
+const imgPortada = getAssetUrl("portada.jpeg");
+const img1 = getAssetUrl("1.jpeg");
+const img2 = getAssetUrl("2.jpeg");
+const img3 = getAssetUrl("3.jpeg");
+const img4 = getAssetUrl("4.jpeg");
+const img5 = getAssetUrl("5.jpeg");
+const img6 = getAssetUrl("6.jpeg");
+const img7 = getAssetUrl("7.jpeg");
+const img8 = getAssetUrl("8.jpeg");
+const img9 = getAssetUrl("9.jpeg");
+const img10 = getAssetUrl("10.jpeg");
+const img11 = getAssetUrl("11.jpeg");
+const img12 = getAssetUrl("12.jpeg");
+
 export interface HojaData {
   id: string | number;
   esTapa: boolean;
@@ -26,7 +32,7 @@ export interface HojaData {
   reverso: React.ReactNode;
 }
 
-// TEXTO EXACTO DE LA CARTA
+// TEXTO DE LA CARTA
 const TEXTO_CARTA_PARTE_1 = `Bueno, mi amorcito,
 
 Ya casi vamos para dos años y ha sido demasiado especial el hecho de haberte conocido, mi amor. Desde que empezamos a conocernos, cada día ha sido bonito, más que todo porque hemos llegado a construir no solo una relación, sino un vínculo mutuo. Sé que me amas y tú sabes que te amo con todo mi ser.
@@ -37,7 +43,7 @@ const TEXTO_CARTA_PARTE_2 = `Si tuviera que decir que hay una cosa que me encant
 
 Qué hermoso es tenerte porque amo, adoro cómo eres, aunque piense que estás loca, pero loco me tienes por ti. Gracias, mi amor, por estar en esta relación y esforzarnos por ella. No se que mas palabras decir solo que aqui tendremos un libro para los dos que era lo que tenia pensado desde el principio mi niña. aqui escribir nuestro camino juntos.`;
 
-// COLLAGES DE FOTOS USANDO IMÁGENES IMPORTADAS
+// COLLAGES DE FOTOS
 const hojasCollage: HojaData[] = [
   {
     id: 3,
